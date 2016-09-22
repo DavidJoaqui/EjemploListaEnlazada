@@ -1,4 +1,4 @@
-/*
+﻿/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -26,11 +26,11 @@ public class lista_personas {
     public void agregar_nodo(Persona p) {
         if (cabeza == null) {
             cabeza = new Nodo(p);
-        } else {
-            Nodo aux = cabeza;
-            Nodo nuevo1 = new Nodo(p);
-            nuevo1.enlazar_Siguiente_nodo(aux);
-            cabeza = nuevo1;
+        } else { 	//por lo menos hay un nodo en la lista
+            Nodo aux = cabeza;			//aux que toma el primer nodo o cabeza
+            Nodo nuevo1 = new Nodo(p);		//se crea el nuevo nodo con sus datos a continuacion de la cabeza
+            nuevo1.enlazar_Siguiente_nodo(aux);	//hacemos o devolvemos el enlace hacia la cabeza para referenciarla
+            cabeza = nuevo1;			//ahora la cabeza pasa a ser el nuevo nodo acabado de crear 
 
         }
         size++;
